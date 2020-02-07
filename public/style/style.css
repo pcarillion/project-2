@@ -1,0 +1,30 @@
+nav {
+    width: 100vw;
+    height: 10vh;
+    background-color: #F5251F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > div > a {
+    color: white 
+}
+
+footer {
+    background-color: #F5251F;
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+}
+
+footer > p {
+    color: white;
+}
+
+#backgroundHome {
+    background-image: image("./../images/backgroundHome.jpg");
+    background-size: cover;
+    z-index: -1;
+}
