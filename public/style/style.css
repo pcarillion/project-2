@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Blender Pro"; 
+    src: url("//db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot");
+}
+
+* {
+    font-family: "Blender Pro", "Serif";
+}
+
+a {
+    text-decoration: none;
+}
+
+
 body {
     margin: 0;
     padding: 0
@@ -12,6 +26,9 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 nav > div > a {
@@ -27,6 +44,7 @@ footer {
     left: 0;
     bottom: 0;
     padding: 0;
+    z-index: 10;
 }
 
 footer > p {
@@ -75,17 +93,24 @@ footer > p {
 
 /* Collection */
 
+h2 {
+    padding-top: 10vh;
+    margin: 0;
+    z-index: 9;
+    text-align: center;
+}
+
 
 #bike-collection {
     display: flex;
     flex-direction: column;
 }
 
-#bike-collection:nth-child(2) {
+#bike-collection:nth-child(odd) {
     background-color: #F5251F;
 }
 
-#bike-collection:nth-child(odd) {
+#bike-collection:nth-child(even) {
     background-color: white;
 }
 
@@ -95,11 +120,56 @@ footer > p {
     display: flex;
 }
 
-.bike-info {
-    width: 50%
+
+.bike-infos {
+    width: 50%;
+    background-color: none;
+    z-index: 1;
+    background-color: black;
+    padding: 10vh;
 }
 
+.bike-infos  p{
+    color: white;
+}
 
+.name {
+    font-size: 8vh;
+}
+
+.engine {
+    font-size: 6vh;
+}
+
+.details {
+    color: white;
+    text-align: end;
+    font-size: 5vh;
+}
+
+.kenburns-right:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    /* z-index: -1; */
+}
+
+.kenburns-right {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.bike-image {
+    z-index: 1;
+}
+
+#blackborder {
+    height: 5vh;
+    width: 100%;
+    background-color: black;
+    z-index: 8;
+}
 
 
 
@@ -113,6 +183,34 @@ footer > p {
 
 /* keyframes */
 
+@-webkit-keyframes kenburns-right {
+    0% {
+      -webkit-transform: scale(1) translate(0, 0);
+              transform: scale(1) translate(0, 0);
+      -webkit-transform-origin: 84% 50%;
+              transform-origin: 84% 50%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateX(20px);
+              transform: scale(1.25) translateX(20px);
+      -webkit-transform-origin: right;
+              transform-origin: right;
+    }
+  }
+  @keyframes kenburns-right {
+    0% {
+      -webkit-transform: scale(1) translate(0, 0);
+              transform: scale(1) translate(0, 0);
+      -webkit-transform-origin: 84% 50%;
+              transform-origin: 84% 50%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateX(20px);
+              transform: scale(1.25) translateX(20px);
+      -webkit-transform-origin: right;
+              transform-origin: right;
+    }
+  }
 
 @-webkit-keyframes bounce-in-left {
     0% {

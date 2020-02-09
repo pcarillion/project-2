@@ -1,18 +1,18 @@
 <h2>Watch all bikes that are coming in 2020!</h2>
 
-{{#unless bikes}}
-<h3>Sorry, no bike here yet...</h3>
-{{/unless}}
-
 <div id="bike-collection"></div>
 {{#each bikes}}
 <div class="bike-container">
-    <div class="bike-image" style="background-image: url('{{this.image}}'); width: 50%; background-size: cover;">
+    <div class="bike-image kenburns-right" style="background-image: url('{{this.image}}'); width: 50%; background-size: cover;">
     </div>
     <div class="bike-infos">
-        <p>{{this.brand}} {{this.name}}</p>
-        <p>{{this.engine}}cc²</p>
+        <div>
+            <p class="name">{{this.brand}} {{this.name}}</p>
+            <p class="engine">{{this.engine}}cc²</p>
+            <p class="details"><a href="">See details</a></p>
+        </div>
     </div>
 </div>
+<div id="blackborder"></div>
 {{/each}}
 </div>
