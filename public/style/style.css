@@ -134,17 +134,16 @@ h2 {
 }
 
 .name {
-    font-size: 8vh;
-}
-
-.engine {
     font-size: 6vh;
 }
 
-.details {
+.engine {
+    font-size: 4vh;
+}
+
+.details a{
     color: white;
-    text-align: end;
-    font-size: 5vh;
+    font-size: 4vh;
 }
 
 .kenburns-right:hover {

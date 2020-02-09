@@ -2,6 +2,7 @@
 
 <div id="bike-collection"></div>
 {{#each bikes}}
+{{!-- <div id="blackborder"></div> --}}
 <div class="bike-container">
     <div class="bike-image kenburns-right" style="background-image: url('{{this.image}}'); width: 50%; background-size: cover;">
     </div>
@@ -9,10 +10,10 @@
         <div>
             <p class="name">{{this.brand}} {{this.name}}</p>
             <p class="engine">{{this.engine}}cc²</p>
-            <p class="details"><a href="">See details</a></p>
+            <p class="details"><a href="">See details ></a></p>
         </div>
     </div>
 </div>
-<div id="blackborder"></div>
+
 {{/each}}
 </div>
