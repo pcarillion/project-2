@@ -1,0 +1,18 @@
+<form method="post" action="/auth/signup">
+    <h2>Signup</h2>
+    <label for="email">Email</label>
+    <input name="email" type="text" value="foo@bar.com">
+    <label for="password">Password</label>
+    <input name="password" type="password" value="foo">
+    {{!-- <div class="row">
+        <label for="avatar">avatar</label>
+        <i id="avatar-icon" class="is-clickable toggle-active fa fa-user fa-lg"></i>
+        <input id="input-file" type="file" class="is-hidden" name="avatar">
+    </div> --}}
+    <button class="btn">Create account!</button>
+    <hr>
+    <p>
+        Already have an account? 
+        <a href="/auth/signin">Please signin!</a>
+    </p>
+</form>

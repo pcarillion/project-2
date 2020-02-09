@@ -2,9 +2,9 @@ require("dotenv").config();
 require("./config/dbconnect");
 
 const express = require("express");
-const app     = express();
-const hbs     = require("hbs");
-const path    = require("path");
+const app = express();
+const hbs = require("hbs");
+const path = require("path");
 // const flash   = require("connect-flash"); // designed to keep messages between 2 http calls
 const session = require("express-session");
 const mongoose = require("mongoose");
@@ -12,7 +12,7 @@ const dbconnect = require("dbconnect");
 
 // MONGOOSE CONFIG
 mongoose
-  .connect("mongodb://localhost/starter-code", { useNewUrlParser: true })
+  .connect("mongodb://localhost/bikeProject", { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -40,15 +40,17 @@ app.use(
   })
 );
 
-
 // ROUTING
-const index = require('./routes/index');
-app.use('/', index);
+app.use("/", require("./routes"));
+app.use("/auth", require("./routes/auth"));
+
+// const auth = require("./routes/auth");
+// app.use("/auth", auth);
 
 // export the app (check import ./bin/www)
-app.listen(process.env.PORT,() => {
-  console.log(`Listening on http://localhost:${process.env.PORT}`)
-})
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on http://localhost:${process.env.PORT}`);
+});
 
 // export the app (check import ./bin/www)
 module.exports = app;
