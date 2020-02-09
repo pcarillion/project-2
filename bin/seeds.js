@@ -14,7 +14,7 @@ const seedBike = [
     engine: 1100,
     horsepower: 225,
     price: 39900,
-    type: ["sportbike"]
+    type: ["sportbike"],
     usage: [],
     A2: false,
     description: `It may be too late to get your hand on one of the 10 hand-built 2020 Aprilia RSV4 X superbikes, but you probably didn't have an extra $45,000 to blow on your next trackday bike anyway. Yet here we are, drooling over the most exotic RSV4 1100 ever made. The bike is built by hand, one at a time, by Aprilia Racing Factory technicians who meticulously equip this beautiful motorcycle with the latest technological advancements they have developed over the past decade of World Superbike and MotoGP competition.`,
@@ -29,7 +29,7 @@ const seedBike = [
     engine: 660,
     horsepower: 95,
     price: 12000,
-    type: ["sportbike"]
+    type: ["sportbike"],
     usage: [],
     A2: false,
     description: ``,
@@ -265,146 +265,145 @@ const seedBike = [
     image: 'https://www.motorcyclistonline.com/resizer/Lefmo7C_4wtsY-W4lCvOL3ejjKY=/1199x899/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/3XW4PO7NTQPW5PF3MWIN7O2G4Y.jpg',
     gallery: ['https://www.motorcyclistonline.com/resizer/a-eeOhjXK9TMJAvszIg4wL-IO6g=/1199x899/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/OROJTQVU5WIGUF6SMGN5ZGUIVY.jpg', 'https://www.motorcyclistonline.com/resizer/z3AWGASbbB3y9pvB3m9sR7HU-6Q=/1199x899/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/Q2LYCHJ7EAIH3CFY5ZQAUYACJI.jpg'],
     link: 'https://moto.honda.fr/motorcycles/range.html'
-},
+}
+
+// {
+//     name: 'Rebel 300',
+//     brand: 'Honda',
+//     engine: 286,
+//     horsepower: ,
+//     price: ,
+//     type: ["Cruiser"],
+//     usage: [],
+//     A2: false,
+//     description: '',
+//     image: '',
+//     gallery: '',
+//     link: 'https://moto.honda.fr/motorcycles/range.html'
+// },
 
 
-{
-    name: 'Rebel 300',
-    brand: 'Honda',
-    engine: 286,
-    horsepower: ,
-    price: ,
-    type: ["Cruiser"],
-    usage: [],
-    A2: false,
-    description: '',
-    image: '',
-    gallery: '',
-    link: 'https://moto.honda.fr/motorcycles/range.html'
-},
+// // Indiana
 
-
-// Indiana
-
-{
-    name: '',
-    brand: 'Indiana',
-    engine: ,
-    horsepower: ,
-    price: ,
-    type: [],
-    usage: [],
-    A2: false,
-    description: '',
-    image: '',
-    gallery: [''],
-    link: 'https://www.indianmotorcycle.fr/family/'
-},
+// {
+//     name: '',
+//     brand: 'Indiana',
+//     engine: ,
+//     horsepower: ,
+//     price: ,
+//     type: [],
+//     usage: [],
+//     A2: false,
+//     description: '',
+//     image: '',
+//     gallery: [''],
+//     link: 'https://www.indianmotorcycle.fr/family/'
+// },
 
 
 
-// Kawasaki
-    {
-        name: '',
-        brand: 'Kawasaki',
-        engine: ,
-        horsepower: ,
-        price: ,
-        type: [],
-        usage: [],
-        A2: ,
-        description: '',
-        image: '',
-        gallery: '',
-        link: 'https://www.kawasaki.fr/fr/products'
-    },
+// // Kawasaki
+//     {
+//         name: '',
+//         brand: 'Kawasaki',
+//         engine: ,
+//         horsepower: ,
+//         price: ,
+//         type: [],
+//         usage: [],
+//         A2: ,
+//         description: '',
+//         image: '',
+//         gallery: '',
+//         link: 'https://www.kawasaki.fr/fr/products'
+//     },
    
 
-// KTM
+// // KTM
 
-{
-    name: '',
-    brand: 'KTM',
-    engine: ,
-    horsepower: ,
-    price: ,
-    type: [],
-    usage: [],
-    A2: ,
-    description: '',
-    image: '',
-    gallery: '',
-    link: 'https://www.ktm.com/'
-},
+// {
+//     name: '',
+//     brand: 'KTM',
+//     engine: ,
+//     horsepower: ,
+//     price: ,
+//     type: [],
+//     usage: [],
+//     A2: ,
+//     description: '',
+//     image: '',
+//     gallery: '',
+//     link: 'https://www.ktm.com/'
+// },
 
-// MV Augusta
+// // MV Augusta
 
-{
-    name: 'Rush 1000',
-    brand: 'MV AUgusta',
-    engine: 998,
-    horsepower: 208,
-    price: 33990,
-    type: ['roadster', ],
-    usage: [],
-    A2: false,
-    description: `MV Agusta's tagline is Motorcycle Art, and this new Rush 1000 continues that legacy. Based on the newly updated Brutale 1000 RR, the Rush 1000 supposedly takes inspiration from the drag-racing community to create a lustworthy machine that'll unwind a twisty road as well as rip down a dragstrip. MV claims the Rush 1000 is the only production bike using radial valves and titanium connecting rods, "crossing into the exclusive world of the hyper-naked motorcycle." Inside the inline four-cylinder motor are a new crankshaft and lighter pistons, as well as a revised combustion chamber layout.`,
-    image: 'https://www.motorcyclistonline.com/resizer/J6-ynxZN9-S7Zllop4liaOfXrvs=/1199x899/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/AB4OARZ45KMEX7XP7LM5RXL33I.jpg',
-    gallery: '',
-    link: 'https://www.mvagusta.com/rush-1000'
-},
+// {
+//     name: 'Rush 1000',
+//     brand: 'MV AUgusta',
+//     engine: 998,
+//     horsepower: 208,
+//     price: 33990,
+//     type: ['roadster', ],
+//     usage: [],
+//     A2: false,
+//     description: `MV Agusta's tagline is Motorcycle Art, and this new Rush 1000 continues that legacy. Based on the newly updated Brutale 1000 RR, the Rush 1000 supposedly takes inspiration from the drag-racing community to create a lustworthy machine that'll unwind a twisty road as well as rip down a dragstrip. MV claims the Rush 1000 is the only production bike using radial valves and titanium connecting rods, "crossing into the exclusive world of the hyper-naked motorcycle." Inside the inline four-cylinder motor are a new crankshaft and lighter pistons, as well as a revised combustion chamber layout.`,
+//     image: 'https://www.motorcyclistonline.com/resizer/J6-ynxZN9-S7Zllop4liaOfXrvs=/1199x899/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/AB4OARZ45KMEX7XP7LM5RXL33I.jpg',
+//     gallery: '',
+//     link: 'https://www.mvagusta.com/rush-1000'
+// },
 
-// Suzuki
+// // Suzuki
 
 
-{
-    name: '',
-    brand: 'Suzuki',
-    engine: ,
-    horsepower: ,
-    price: ,
-    type: [],
-    usage: [],
-    A2: ,
-    description: '',
-    image: '',
-    gallery: '',
-    link: 'https://www.suzuki-moto.com/gamme-2020'
-},
+// {
+//     name: '',
+//     brand: 'Suzuki',
+//     engine: ,
+//     horsepower: ,
+//     price: ,
+//     type: [],
+//     usage: [],
+//     A2: ,
+//     description: '',
+//     image: '',
+//     gallery: '',
+//     link: 'https://www.suzuki-moto.com/gamme-2020'
+// },
 
-// Triumph
+// // Triumph
 
-{
-    name: '',
-    brand: 'Triumph',
-    engine: ,
-    horsepower: ,
-    price: ,
-    type: [],
-    usage: [],
-    A2: false,
-    description: '',
-    image: '',
-    gallery: '',
-    link: 'https://www.triumphmotorcycles.fr/#'
-},
+// {
+//     name: '',
+//     brand: 'Triumph',
+//     engine: ,
+//     horsepower: ,
+//     price: ,
+//     type: [],
+//     usage: [],
+//     A2: false,
+//     description: '',
+//     image: '',
+//     gallery: '',
+//     link: 'https://www.triumphmotorcycles.fr/#'
+// },
 
-// Yamaha 
+// // Yamaha 
 
-{
-    name: '',
-    brand: 'Yamaha',
-    engine: ,
-    horsepower: ,
-    price: ,
-    type: [],
-    usage: [],
-    A2: ,
-    description: '',
-    image: '',
-    gallery: '',
-    link: 'https://www.yamaha-motor.eu/fr/fr/products/motos/'
-},
+// {
+//     name: '',
+//     brand: 'Yamaha',
+//     engine: ,
+//     horsepower: ,
+//     price: ,
+//     type: [],
+//     usage: [],
+//     A2: ,
+//     description: '',
+//     image: '',
+//     gallery: '',
+//     link: 'https://www.yamaha-motor.eu/fr/fr/products/motos/'
+// },
 ]
 
 
