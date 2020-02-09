@@ -1,32 +1,18 @@
 <h2>Watch all bikes that are coming in 2020!</h2>
 
-{{#unless movies}}
+{{#unless bikes}}
 <h3>Sorry, no bike here yet...</h3>
 {{/unless}}
 
+<div id="bike-collection"></div>
 {{#each bikes}}
 <div class="bike-container">
-    <div class="bike-image">
-        <img src="{{this.image}}" alt="Image of bike">
+    <div class="bike-image" style="background-image: url('{{this.image}}'); width: 50%; background-size: cover;">
     </div>
     <div class="bike-infos">
-        <h3>{{this.name}}</h3>
-        <h4>Constructor: 
-            <a href="{{this.link}}">
-                {{this.brand}}
-            </a>
-        </h4>
-        <ul>
-            <li>Engine: {{this.engine}}cc²</li>
-            <li>Horsepower: {{this.horsepower}}</li>
-            <li>Type: {{this.type}}</li>
-            <li>Available for A2: {{this.A2}}</li>
-            <li>Release price: {{this.price}}€</li>
-        </ul>
-        <p>
-            Here's a little description from the constructor:
-            <i>{{this.description}}</i>;
-        </p>
+        <p>{{this.brand}} {{this.name}}</p>
+        <p>{{this.engine}}cc²</p>
     </div>
 </div>
 {{/each}}
+</div>
