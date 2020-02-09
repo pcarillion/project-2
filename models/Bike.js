@@ -6,31 +6,31 @@ const bikeSchema = new Schema({
         type: String,
         required: true
     },
-    ref: {
+    brand: {
         type: String,
         required: true
     },
-    sizes: {
+    engine: {
         type: Number,
-        required: true
     },
-    description: {
-        type: String,
-        required: true
+    horsepower: {
+        type: Number,
     },
     price: {
         type: Number,
-        required: true
     },
-    category: {
+    type: {
         type: String,
-        enum: ["Men", "Women", "Kids"],
+        enum: ["cruiser", "touring", "roadster", "sportbike", "dual-sport", "standard-retro"],
     },
-    image: { type: String },
-    id_tags: {
-        type: Schema.Types.ObjectId,
-        ref: 'Tags'
-    }
+    usage: {
+
+    },
+    A2: String,
+    description: String,
+    image: String,
+    gallery: Array,
+    link: String
 })
 
 const bikeModel = mongoose.model("Bike", bikeSchema)

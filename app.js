@@ -46,4 +46,9 @@ const index = require('./routes/index');
 app.use('/', index);
 
 // export the app (check import ./bin/www)
+app.listen(process.env.PORT,() => {
+  console.log(`Listening on http://localhost:${process.env.PORT}`)
+})
+
+// export the app (check import ./bin/www)
 module.exports = app;
