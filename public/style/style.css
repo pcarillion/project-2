@@ -45,12 +45,24 @@ footer {
     bottom: 0;
     padding: 0;
     z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 footer > p {
     color: white;
     font-size: 2vh;
     margin: 0;
+}
+
+footer > button {
+    background-color: #F5251F;
+    height: 100%;
+    color: white;
+    border-style: none;
+    border: none;
 }
 
 
