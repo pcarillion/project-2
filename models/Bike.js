@@ -21,7 +21,7 @@ const bikeSchema = new Schema({
     },
     type: {
         type: String,
-        enum: ["cruiser", "touring", "roadster", "sportbike", "dual-sport", "standard-retro"],
+        enum: ["Cruiser", "Touring", "Roadster", "Sportbike", "Dual-sport", "Standard-retro"],
     },
     usage: {
 
