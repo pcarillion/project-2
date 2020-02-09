@@ -1,11 +1,15 @@
-<h2>Watch all bikes that are coming in 2020!</h2>
+{{!-- {{!-- <h2>Watch all bikes that are coming in 2020!</h2> --}} --}}
 
 <div id="bike-collection"></div>
 {{#each bikes}}
-{{!-- <div id="blackborder"></div> --}}
+
+
 <div class="bike-container">
-    <div class="bike-image kenburns-right" style="background-image: url('{{this.image}}'); width: 50%; background-size: cover;">
+    <div class="image-border">
+        <div class="bike-image" style="background-image: url('{{this.image}}');">
+        </div>
     </div>
+    
     <div class="bike-infos">
         <div>
             <p class="name">{{this.brand}} {{this.name}}</p>
@@ -14,6 +18,10 @@
         </div>
     </div>
 </div>
+
+{{!-- <div id="blackborder"></div> --}}
+
+
 
 {{/each}}
 </div>

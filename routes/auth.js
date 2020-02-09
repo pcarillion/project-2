@@ -5,11 +5,11 @@ const bcryptjs = require("bcryptjs"); // intro to bcrypt hashing algorithm https
 
 // FORM VIEWS
 router.get("/signup", (req, res) => {
-  res.render("auth/signup");
+  res.render("signup");
 });
 
 router.get("/signin", (req, res) => {
-  res.render("auth/signin");
+  res.render("signin");
 });
 
 module.exports = router;

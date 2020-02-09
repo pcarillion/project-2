@@ -118,6 +118,7 @@ h2 {
     height: 70vh;
     width: 100%;
     display: flex;
+    z-index: 5;
 }
 
 
@@ -146,28 +147,38 @@ h2 {
     font-size: 4vh;
 }
 
-.kenburns-right:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    /* z-index: -1; */
+.bike-image:hover {
+    -webkit-transform: scale(1.0.5);
+    transform: scale(1.05);
+    -webkit-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 
-.kenburns-right {
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+
+
+.image-border {
+    width: 50vw;
+    z-index: auto;
+    padding: 1vw 1.1vw 0 0;
+    background-color: black;
 }
 
 .bike-image {
-    z-index: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-size: cover;
 }
 
+
+
 #blackborder {
-    height: 5vh;
+    height: 2vh;
     width: 100%;
     background-color: black;
-    z-index: 8;
+    z-index: 6;
 }
 
 
