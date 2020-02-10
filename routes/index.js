@@ -15,6 +15,19 @@ router.get("/collection", (req, res, next) => {
     console.log(bikes);
     res.render("collection", {bikes})
   })
+  .catch(next)
 })
+
+// GET one bike page
+
+router.get("/one-bike-:id", (req, res, next)=> {
+  bikeModel
+  .findById(req.params.id)
+  .then(bike => {
+    res.render("one-bike", {bike : bike})
+  })
+  .catch(next)
+  }
+)
 
 module.exports = router;
