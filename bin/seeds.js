@@ -277,26 +277,71 @@ const seedBike = [
 //     usage: [],
 //     A2: false,
 //     description: '',
-//     image: '',
+//     image: 'https://www.motorcyclistonline.com/resizer/eoYfXZiTZ1q_Wfmzin7pOTTNYYk=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/TJPEYTHP5SBZSVX3QAQNE5LKZ4.jpg',
 //     gallery: '',
 //     link: 'https://moto.honda.fr/motorcycles/range.html'
 // },
 
 
-// // Indiana
+// // Indian
 
 // {
-//     name: '',
-//     brand: 'Indiana',
-//     engine: ,
+//     name: 'Scoot 100th Anniversary',
+//     brand: 'Indian',
+//     engine: 1133,
 //     horsepower: ,
 //     price: ,
-//     type: [],
+//     type: "Cruiser",
 //     usage: [],
 //     A2: false,
-//     description: '',
-//     image: '',
-//     gallery: [''],
+//     description: 'The Scout 100th Anniversary model harkens back to the original with its Indian Motorcycle Red color accented by gold trim, as well as with its black wire wheels and beach-style handlebar, a floating tan leather seat, and a luggage rack. It’s finished off by a color-matched Scout 100th-anniversary badge and various chrome finishes. Indian is limiting global production to 750 units.',
+//     image: 'https://www.motorcyclistonline.com/resizer/3dEPGi6DC_9T0XTxUhK3KZPb_uA=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/L6TGYGBF5RFTHYHEWA6KN2ZYWY.jpg',
+//     gallery: ['https://moto-station.com/wp-content/uploads/2019/09/05/Indian-Scout-2020-100-anniversaire-01-1024x683.jpg', 'https://moto-station.com/wp-content/uploads/2019/09/05/Indian-Scout-2020-100-anniversaire-TH-1-1024x576.jpg', 'https://moto-station.com/wp-content/uploads/2019/09/05/Indian-Scout-2020-100-anniversaire-TH-2-1024x576.jpg'],
+//     link: 'https://www.indianmotorcycle.fr/family/'
+// },
+
+// {
+//     name: 'Scoot Bobber Twenty',
+//     brand: 'Indian',
+//     engine: 1130,
+//     horsepower: 100,
+//     price: 15190,
+//     type: "Cruiser",
+//     usage: [],
+//     A2: false,
+//     description: 'The second model variant to capitalize on the original 1920 Scout is the Scout Bobber Twenty, which also uses wire wheels and nifty floating saddle to stand apart from other Scouts. It features a mix of chrome and blacked-out finishes and an apehanger handlebar that delivers, according to Indian, “old-school bobber style with relaxed ergonomics.”',
+//     image: 'https://www.motorcyclistonline.com/resizer/kHnnoKVwb5Hib9Co9KTBVIBbnBw=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/T4BF7AMP2MVAVT5YANYT7ENXVE.jpg',
+//     gallery: ['https://www.indianmotorcycle.fr/fileadmin/templates/model_20/gallery/scout-bobber-20/5.jpg', 'https://www.indianmotorcycle.fr/fileadmin/templates/model_20/gallery/scout-bobber-20/3.jpg', 'https://www.indianmotorcycle.fr/fileadmin/templates/model_20/gallery/scout-bobber-20/6.jpg', 'https://www.indianmotorcycle.fr/fileadmin/templates/model_20/gallery/scout-bobber-20/7.jpg', 'https://www.indianmotorcycle.fr/fileadmin/templates/model_20/features20/scout-bobber-20/f3-3.jpg'],
+//     link: 'https://www.indianmotorcycle.fr/family/'
+// },
+
+// {
+//     name: 'Thunder Stroke',
+//     brand: 'Indian',
+//     engine: 1901,
+//     horsepower: 116,
+//     price: ,
+//     type: "Cruiser",
+//     usage: [],
+//     A2: false,
+//     description: 'Indian Motorcycle released its 2020 Thunder Stroke models with a host of new connected Ride Command features, an all-new Roadmaster Dark Horse, redesigned Springfield Dark Horse, Chieftain Elite, and the announcement that several models will come standard with a 116ci engine.',
+//     image: 'https://www.motorcyclistonline.com/resizer/CvYKTZAOdP8P1uSMcX9MVSrcfjM=/801x600/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/U7EYBFK4OOINNVID26HIMLAKEU.jpg',
+//     gallery: ['https://www.motorcyclistonline.com/resizer/lPnQkoFrgg7Z9AST-J8lRTxeTzg=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/7VAEXF43RNR53JV2PBD7B2UQDQ.jpg', 'https://www.motorcyclistonline.com/resizer/Vbxpc3x6c4PKtfLVJukW-XafoNI=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/3RTF6Y25L3OJVHU3CYO4HYGN5E.jpg'],
+//     link: 'https://www.indianmotorcycle.fr/family/'
+// },
+
+// {
+//     name: 'Indian Motorcycle Challenger',
+//     brand: 'Indian',
+//     engine: 1768,
+//     horsepower: 122,
+//     price: ,
+//     type: "Cruiser",
+//     usage: [],
+//     A2: false,
+//     description: 'Indian Motorcycle reveals an all-new liquid-cooled V-twin for its new fixed-fairing bagger, the Challenger, set to debut as a rival for Harley-Davidson's Road Glide…',
+//     image: 'https://www.motorcyclistonline.com/resizer/ZPKVq_-tsYWcz8wG0JKfNPLAcZc=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/XPWVAR6XC6SXZLN7OSQGH7KOMM.jpg',
+//     gallery: ['https://www.motorcyclistonline.com/resizer/qG6IPA7vEPXQzTDeIjFhVcqVPD4=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/77JWA43HZVNMNONFLRGTRQOOGQ.jpg', 'https://www.motorcyclistonline.com/resizer/3Ds1OsFE3hkW6A7RymhAXX3Ms_s=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/4Z5V3OYSAEJI4RBGJ4WV5QHBD4.jpg'],
 //     link: 'https://www.indianmotorcycle.fr/family/'
 // },
 
@@ -304,20 +349,66 @@ const seedBike = [
 
 // // Kawasaki
 //     {
-//         name: '',
+//         name: 'Ninja 650',
 //         brand: 'Kawasaki',
-//         engine: ,
-//         horsepower: ,
-//         price: ,
-//         type: [],
+//         engine: 649,
+//         horsepower: 58,
+//         price: 7799,
+//         type: 'Roadster',
 //         usage: [],
-//         A2: ,
-//         description: '',
-//         image: '',
-//         gallery: '',
+//         A2: true,
+//         description: 'Kawasaki's pulls the wraps off its updated-for-2020 Ninja 650 ABS. Featuring sharper and racier body panels, in line with the rest of the Ninja family, this parallel-twin 650 is a kinder, more gentle sportbike for everyday street riders…',
+//         image: 'https://www.motorcyclistonline.com/resizer/iGxLm8RbUlGAK83OppPGbnIS0TE=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/NOC3KPEI4FEPJDG5LUMEZY2WPM.jpg',
+//         gallery: ['https://www.motorcyclistonline.com/resizer/CBBGpB5e0_z8zhWDVLBlNXCf-Po=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/2UARU5M4NW5646KXASPTQRFR6Q.jpg', 'https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/2020_Ninja%20650_GN1_STU%202.001.png' , 'https://www.motorcyclistonline.com/resizer/G6Wdj5lWl_kVpg4BEeb1KGVOpv4=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/U6QG62C2ZOEIN77VXPEZUP7Y7U.jpg', 'https://www.motorcyclistonline.com/resizer/fn3PUjNdPCp5_s8K2l4nXS2i1i4=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/YEDTLQM2LMDOVLCALYL4EFQZ64.jpg'],
 //         link: 'https://www.kawasaki.fr/fr/products'
 //     },
-   
+//
+//     {
+//         name: 'ZX-6R',
+//         brand: 'Kawasaki',
+//         engine: 636,
+//         horsepower: 130,
+//         price: 11699,
+//         type: 'Roadster',
+//         usage: [],
+//         A2: false,
+//         description: 'The ZX-6R is at home on the street or track, which makes it a perfect motorcycle for riders who want a bike that doesn’t cut corners—it carves them…',
+//         image: 'https://www.motorcyclistonline.com/resizer/9kc0JPTD24tyxUMEdDGz3X9nynA=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/OYAFIR3WQFD4MZNYP4LWCSN4DE.jpg',
+//         gallery: ['https://www.motorcyclistonline.com/resizer/Dd8-1cTybUIlbjjXVyfrXVR3B6c=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/KD5JAFJS6N54X26KNODTGXEVXU.jpg', 'https://www.motorcyclistonline.com/resizer/Rs69zty4ktkohYUgjy7xYIcTeCI=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/UJPWPHYD6IGS47M7NUWDDQN7TA.jpg', 'https://www.motorcyclistonline.com/resizer/fqQe_OsIDMnMU6Q0FbbkFhCgFBo=/801x299/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/MQ4GDL3QUTCDJNOSS25OHRV54U.jpg']
+//         link: 'https://www.kawasaki.fr/fr/products'
+//     },
+//
+//     {
+//         name: 'ZX-10R',
+//         brand: 'Kawasaki',
+//         engine: 998,
+//         horsepower: 203,
+//         price: 18099,
+//         type: 'Roadster',
+//         usage: [],
+//         A2: false,
+//         description: 'The 2020 Kawasaki Ninja ZX-10R is now available in the new KRT Edition livery with ABS as well as the Metallic Spark Black version for those who prefer a more subtle look. The big ZX is powered by a ram-air-inducted, 998cc, inline four-cylinder engine that features finger follower valve actuation, titanium alloy exhaust, forged chromoly billet cams, lightened crank, lightened pistons, and a cylinder head that now allows the use of optional KRT high-lift cams which was previously only offered on the ZX-10RR.',
+//         image: 'https://www.motoplanete.com/kawasaki/zoom-700px/Kawasaki-ZX-10R-KRT-replica-2020-700px.jpg',
+//         gallery: [ 'https://www.motorcyclistonline.com/resizer/X8aFXojRqTSOPK9HCmDsaEWzZ50=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/7DXBV2ERE5GVDU5DSCP34SUEQQ.jpg', 'https://www.motorcyclistonline.com/resizer/4Yz1WGhh1ZOA7jsrLXgfJTQVQWI=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/PDCD5YAAAV6WH7BOZQYLREEDAM.jpg'],
+//         link: 'https://www.kawasaki.fr/fr/products'
+//     },
+//
+//     {
+//         name: 'W800',
+//         brand: 'Kawasaki',
+//         engine: 773,
+//         horsepower: 48,
+//         price: 10249,
+//         type: "Standard-retro",
+//         usage: [],
+//         A2: true,
+//         description: 'With the arrival of the 2020 Kawasaki W800, consumers now have two retro classic Kawasaki motorcycles to choose from. The W800 has the look and feel of the 1966 W1 while the W800 Café offers the sporty style made popular by the racers back in the day.',
+//         image: 'https://www.motorcyclistonline.com/resizer/C9Lw9I5S8sJSIZ2pXqsKGJ3_7Eo=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/HPJLOYAI7UQBKOPOFJGBIJMPSY.jpg',
+//         gallery: ['https://www.motorcyclistonline.com/resizer/sPgsGoHmc4pmjc1HB2DOb09n0QE=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/ZB36OJC4H2ML6INNL7XH2S4V4M.jpg', 'https://www.motorcyclistonline.com/resizer/VDMZqa_lwGA8WodSDHukGc5QKRo=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/FIP7HPMTCWOL6JDBA3WVYCYFHM.jpg', 'https://www.motorcyclistonline.com/resizer/85xh7Iv6Q4ZQZSrLel23eL2zbrQ=/801x601/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/NEHPAQP7TTSNQDKA2AOVOTRJNI.jpg'],
+//         link: 'https://www.kawasaki.fr/fr/products'
+//     },
+//
+
 
 // // KTM
 
