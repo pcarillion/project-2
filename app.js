@@ -44,9 +44,6 @@ app.use(
 app.use("/", require("./routes"));
 app.use("/auth", require("./routes/auth"));
 
-// const auth = require("./routes/auth");
-// app.use("/auth", auth);
-
 // export the app (check import ./bin/www)
 app.listen(process.env.PORT, () => {
   console.log(`Listening on http://localhost:${process.env.PORT}`);

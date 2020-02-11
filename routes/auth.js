@@ -59,7 +59,35 @@ router.post("/signin", (req, res, next) => {
     return res.redirect("/auth/signin");
   }
 
-  
+  userModel
+  .findOne({ mail: user.mail})
+  .then(dbRes => {
+    if(!dbRes) {
+      // !dbRes means that no user has been found with this mail
+      console.log("ERROR! Wrong credentials..........");
+      return res.redirect("/auth/signin");
+    }
+    // case 2: user has been found in db
+    if (bcryptjs.compareSync(user.password, dbRes.password)) {
+      // encryption says: password match success
+      const {_doc: clone} = {...dbRes}; // make a clone of db user
+      delete clone.password; // remove password from clone
+      console.log(clone);
+      req.session.currentUser = clone;
+      // user is now in session...
+      // until session.destroy
+      // could be req.session.totoFriends = clone;
+      console.log("WELCOME! You've been logged successfully!");
+      return res.redirect("/private");
+    } else {
+      // encrypted password match failed
+      console.log("ERROR! WRONG CREDENTIALS!!!")
+      return res.redirect("/auth/signin")
+    }
+  })
+  .catch(dbErr => {
+    console.log("Error: ", dbErr);
+  })
 })
 
 module.exports = router;
