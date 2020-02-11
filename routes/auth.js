@@ -6,7 +6,7 @@ const session = require("express-session");
 
 // GO TO THE SIGNUP FORM TO REGISTER
 router.get("/signup", (req, res) => {
-  res.render("signup");
+  res.render("auth/signup");
 });
 
 /* GO TO THE SIGNIN FORM TO LOG IN */
