@@ -25,21 +25,56 @@ function topFunction() {
 
 
 
-  $('.filter-button-group').on( 'click', 'button', function() {
+  $('#brandButtons').on( 'click', 'button', function() {
       console.log("button clicked")
     var filterValue = $(this).attr('data-filter');
         console.log(filterValue)
+    // filterValue = filtrerCylindrée[ filterValue ] || filterValue;
     $bikeCollection.isotope({ filter: filterValue });
   });
 
+  $('#engineButtons').on( 'click', 'button', function() {
+    console.log("button clicked")
+  var filterValue = $(this).attr('data-filter');
+      console.log(filterValue)
+  filterValue = filtrerCylindrée[ filterValue ] || filterValue;
+  $bikeCollection.isotope({ filter: filterValue });
+});
+
+
   
 
-//   $bikeCollection.isotope({
-//     // filter element with numbers greater than 50
-//     filter: function() {
-//       // _this_ is the item element. Get text of element's .number
-//       var number = $(bike-container).find('.engine').text();
-//       // return true to show, false to hide
-//       return parseInt(engine, 10 ) > 50;
-//     }
-//   })
+  var filtrerCylindrée = {
+    // filter element with numbers greater than 50
+    petiteCylindrée: function() {
+      // _this_ is the item element. Get text of element's .number
+      var engine = $(this).find('.engine').text();
+      // return true to show, false to hide
+      console.log(engine)
+      return parseInt(engine, 10 ) < 500;
+    },
+
+    moyenneCylindrée: function() {
+        // _this_ is the item element. Get text of element's .number
+        var engine = $(this).find('.engine').text();
+        // return true to show, false to hide
+        return parseInt(engine, 10 ) > 500 && parseInt(engine, 10) < 766;
+      },
+
+    grosseCylindrée: function() {
+        // _this_ is the item element. Get text of element's .number
+        var engine = $(this).find('.engine').text();
+        // return true to show, false to hide
+        return parseInt(engine, 10 ) > 766;
+    }
+  }
+
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+
+  
