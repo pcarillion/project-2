@@ -1,46 +1,53 @@
-<form action="/bikes/create" method="POST" id="create-form">
-    <h1>ADD A BIKE!</h1>
+<div class="create-container">
+    <form action="/bikes/create" method="POST" id="create-form">
+        <h2>ADD A NEW BIKE!</h2>
+        <div class="createInputs">
+            <div class="createForm-left">
+                <label for="name">Model</label>
+                <input type="text" name="name">
 
-    <label for="name">Model</label>
-    <input type="text" name="name">
+                <label for="brand">Brand</label>
+                <input type="text" name="brand">
 
-    <label for="brand">Brand</label>
-    <input type="text" name="brand">
+                <label for="engine">Engine (cc)</label>
+                <input type="number" name="engine">
 
-    <label for="type">Type</label>
-    <select name="type" id="select-biketype">
-        <option value="Cruiser">Cruiser</option>
-        <option value="Touring">Touring</option>
-        <option value="Roadster">Roadster</option>
-        <option value="Sportbike">Sportbike</option>
-        <option value="Dual-sport">Dual-sport</option>
-        <option value="Standard-retro">Standard-retro</option>
-    </select>
+                <label for="horsepower">Horsepower</label>
+                <input type="number" name="">
 
-    <label for="engine">Displacement (cc)</label>
-    <input type="number" name="engine">
+                <label for="price">Price</label>
+                <input type="number" name="">
 
-    <label for="horsepower">Horsepower</label>
-    <input type="number" name="">
+                <label for="type">Type</label>
+                <select name="type" id="select-biketype">
+                    <option value="Cruiser">Cruiser</option>
+                    <option value="Touring">Touring</option>
+                    <option value="Roadster">Roadster</option>
+                    <option value="Sportbike">Sportbike</option>
+                    <option value="Dual-sport">Dual-sport</option>
+                    <option value="Standard-retro">Standard-retro</option>
+                </select>
 
-    <label for="price">Price</label>
-    <input type="number" name="">
+                <label for="A2">Available for A2</label>
+                <input type="checkbox" name="A2">
+            </div>
+            <div class="createForm-right">
 
-    <label for="usage">Usage</label>
-    <input type="text" name="">
+                {{!-- <label for="usage">Usage</label>
+                <input type="text" name=""> --}}
 
-    <label for="A2">A2</label>
-    <input type="checkbox" name="">
+                <label for="description">Description</label>
+                <input type="text" name="">
 
-    <label for="description">Description</label>
-    <input type="text" name="">
+                <label for="link">Link to the brand</label>
+                <input type="url" name="">
 
-    <label for="link">Link</label>
-    <input type="url" name="">
+                <label for="image">Link for image</label>
+                <input type="link" name="image">
+            </div>
+        </div>
 
-    <label for="image">Image</label>
-    <input type="url" name="image">
-
-    <button class="create-btn">Create !</button>
-    {{!-- <input type="submit" value="Add !"> --}}
-</form>
+        <button id="create-btn">CREATE</button>
+        {{!-- <input type="submit" value="Add !"> --}}
+    </form>
+</div>
