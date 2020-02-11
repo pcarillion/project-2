@@ -1,9 +1,9 @@
 {{!-- {{!-- <h2>Watch all bikes that are coming in 2020!</h2> --}} --}}
 
 <aside class="button-group filter-button-group">
-    <button data-filter="*">show all</button>
     <p>Filter by Brand</p>
-    <div>
+    <div id="brandButtons">
+        <button data-filter="*">All</button>
         <button data-filter=".Aprilia">Aprilia</button>
         <button data-filter=".Arch">Arch</button>
         <button data-filter=".BMW">BMW</button>
@@ -18,6 +18,13 @@
         <button data-filter=".Suzuki">Suzuki</button>
         <button data-filter=".Triumph">Triumph</button>
         <button data-filter=".Yamaha">Yamaha</button>
+    </div id="engineButtons">
+    <p>Filter by Engine</p>
+    <div>
+        <button data-filter="*"></button>
+        <button data-filter="petiteCylindrée">Petite cylindrée (&lt;500)</button>
+        <button data-filter="moyenneCylindrée">Moyenne cylindrée (&lt;800)</button>
+        <button data-filter="grosseCylindrée">Grosse cylindrée (&gt;800)</button>
     </div>
     
 
