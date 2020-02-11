@@ -72,7 +72,7 @@ router.post("/signin", (req, res, next) => {
       // encryption says: password match success
       const {_doc: clone} = {...dbRes}; // make a clone of db user
       delete clone.password; // remove password from clone
-      console.log(clone);
+      console.log(clone); // log without password
       req.session.currentUser = clone;
       // user is now in session...
       // until session.destroy

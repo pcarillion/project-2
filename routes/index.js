@@ -30,4 +30,14 @@ router.get("/one-bike-:id", (req, res, next)=> {
   }
 )
 
+// GET myCollection (private route)
+
+router.get("/private", (req, res) => {
+  if (req.session.currentUser){
+    res.render("private");
+  } else {
+    res.redirect("/auth/login");
+  }
+})
+
 module.exports = router;
