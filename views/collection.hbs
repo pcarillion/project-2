@@ -4,7 +4,7 @@
 
 <div id="bike-collection">
 {{#each bikes}}
-<div class="bike-container">
+<div class="bike-container {{this.brand}} {{this.type}}">
     <div class="image-border">
         <div class="bike-image" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.1), rgba(10, 1, 8, 0.6)), url('{{this.image}}');">
         </div>
@@ -12,7 +12,7 @@
     
     <div class="bike-infos">
             <p class="name">{{this.brand}} {{this.name}}</p>
-            <p class="engine">{{this.engine}}cc</p>
+            <p class="engine"><span class="engine">{{this.engine}}</span>cc</p>
             <p class="details"><a href="one-bike-{{this.id}}">See details ></a></p>
     </div>
 </div>
