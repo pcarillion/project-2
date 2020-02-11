@@ -1,6 +1,28 @@
 {{!-- {{!-- <h2>Watch all bikes that are coming in 2020!</h2> --}} --}}
 
+<aside class="button-group filter-button-group">
+    <button data-filter="*">show all</button>
+    <p>Filter by Brand</p>
+    <div>
+        <button data-filter=".Aprilia">Aprilia</button>
+        <button data-filter=".Arch">Arch</button>
+        <button data-filter=".BMW">BMW</button>
+        <button data-filter=".Ducati">Ducati</button>
+        <button data-filter=".Guzzi">Guzzi</button>
+        <button data-filter=".Harley">Harley</button>
+        <button data-filter=".Honda">Honda</button>
+        <button data-filter=".Indian">Indian</button>
+        <button data-filter=".Kawasaki">Kawasaki</button>
+        <button data-filter=".KTM">KTM</button>
+        <button data-filter=".MV">MV</button>
+        <button data-filter=".Suzuki">Suzuki</button>
+        <button data-filter=".Triumph">Triumph</button>
+        <button data-filter=".Yamaha">Yamaha</button>
+    </div>
+    
 
+    <button data-filter="enginGreaterThan750">cc greater than 750</button>
+</aside>
 
 <div id="bike-collection">
 {{#each bikes}}
