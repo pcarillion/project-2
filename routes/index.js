@@ -8,7 +8,7 @@ router.get(["/", "/index"], (req, res, next) => {
 });
 
 /* GET all-bikes page */
-router.get("/collection", (req, res, next) => {
+router.get(["/collection", "/bikes"], (req, res, next) => {
   bikeModel
   .find()
   .then(bikes => {
