@@ -13,49 +13,53 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
-  mybutton.onclick = topFunction
+mybutton.onclick = topFunction
 
+function toggleFilters() {
+    document.querySelector("#filtersSection").classList.toggle("hidden")
+} 
 
+document.querySelector('#filterButton').onclick = toggleFilters;
 
   var $bikeCollection = $('#bike-collection').isotope({
     itemSelector: '.bike-container',
  });
 
 
- console.log($bikeCollection)
+//  console.log($bikeCollection)
 
 
- var filterValueCyl;
- var filterValueBrand;
- var filterValueType;
+//  var filterValueCyl;
+//  var filterValueBrand;
+//  var filterValueType;
 
-  $('#brandButtons').on( 'click', 'button', function() {
-      console.log("button clicked")
-    filterValueBrand = $(this).attr('data-filter');
-        console.log(filterValueBrand)
-    // filterValue = filtrerCylindrée[ filterValue ] || filterValue;
-    // return filterValueBrand
-    $bikeCollection.isotope({ filter: filterValueBrand });
-  });
+//   $('#brandButtons').on( 'click', 'button', function() {
+//       console.log("button clicked")
+//     filterValueBrand = $(this).attr('data-filter');
+//         console.log(filterValueBrand)
+//     // filterValue = filtrerCylindrée[ filterValue ] || filterValue;
+//     // return filterValueBrand
+//     $bikeCollection.isotope({ filter: filterValueBrand });
+//   });
 
-  $('#engineButtons').on( 'click', 'button', function() {
-    // console.log("button clicked")
-  filterValueCyl = $(this).attr('data-filter');
-      console.log(filterValueCyl)
-  filterValueCyl = filtrerCylindrée[ filterValueCyl ] || filterValueCyl;
-//   return filterValueCyl
-  $bikeCollection.isotope({ filter: filterValueCyl });
-});
+//   $('#engineButtons').on( 'click', 'button', function() {
+//     // console.log("button clicked")
+//   filterValueCyl = $(this).attr('data-filter');
+//       console.log(filterValueCyl)
+//   filterValueCyl = filtrerCylindrée[ filterValueCyl ] || filterValueCyl;
+// //   return filterValueCyl
+//   $bikeCollection.isotope({ filter: filterValueCyl });
+// });
 
 
-$('#typeButtons').on( 'click', 'button', function() {
-    console.log("button clicked")
-  filterValueType = $(this).attr('data-filter');
-      console.log(filterValueType)
-  // filterValue = filtrerCylindrée[ filterValue ] || filterValue;
-  // return filterValueBrand
-  $bikeCollection.isotope({ filter: filterValueType });
-});
+// $('#typeButtons').on( 'click', 'button', function() {
+//     console.log("button clicked")
+//   filterValueType = $(this).attr('data-filter');
+//       console.log(filterValueType)
+//   // filterValue = filtrerCylindrée[ filterValue ] || filterValue;
+//   // return filterValueBrand
+//   $bikeCollection.isotope({ filter: filterValueType });
+// });
 
 //  $bikeCollection.isotope({ filter: filterValue })
 
@@ -76,66 +80,72 @@ $('#typeButtons').on( 'click', 'button', function() {
 
   
 
-  var filtrerCylindrée = {
-    // filter element with numbers greater than 50
-    petiteCylindrée: function() {
-      // _this_ is the item element. Get text of element's .number
-      var engine = $(this).find('.engine').text();
-      // return true to show, false to hide
-      console.log(engine)
-      console.log(parseInt(engine, 10 ) < 500)
-      return parseInt(engine, 10 ) < 500;
-    },
+//   var filtrerCylindrée = {
+//     // filter element with numbers greater than 50
+//     petiteCylindrée: function() {
+//       // _this_ is the item element. Get text of element's .number
+//       var engine = $(this).find('.engine').text();
+//       // return true to show, false to hide
+//       console.log(engine)
+//       console.log(parseInt(engine, 10 ) < 500)
+//       return parseInt(engine, 10 ) < 500;
+//     },
 
-    moyenneCylindrée: function() {
-        // _this_ is the item element. Get text of element's .number
-        var engine = $(this).find('.engine').text();
-        // return true to show, false to hide
-        return parseInt(engine, 10 ) > 500 && parseInt(engine, 10) < 766;
-      },
+//     moyenneCylindrée: function() {
+//         // _this_ is the item element. Get text of element's .number
+//         var engine = $(this).find('.engine').text();
+//         // return true to show, false to hide
+//         return parseInt(engine, 10 ) > 500 && parseInt(engine, 10) < 766;
+//       },
 
-    grosseCylindrée: function() {
-        // _this_ is the item element. Get text of element's .number
-        var engine = $(this).find('.engine').text();
-        // return true to show, false to hide
-        return parseInt(engine, 10 ) > 766;
-    }
-  }
+//     grosseCylindrée: function() {
+//         // _this_ is the item element. Get text of element's .number
+//         var engine = $(this).find('.engine').text();
+//         // return true to show, false to hide
+//         return parseInt(engine, 10 ) > 766;
+//     }
+//   }
 
 
   
 
-//   var filters = {};
+  var filters = {};
 
-//   $('.filter-button-group').on('click', 'button', 
+  $('.filter-button-group').on('click', 'button', 
 
+     function(event) {
 
-//     function(event) {
+        console.log("hey")
 
-//         console.log("hey")
+        var $button = $(event.currentTarget);
 
-//         var $button = $(event.currentTarget);
-//         console.log($button)
+        console.log($button)
 
-//         var $buttonGroup = $button.parents('.buttonGroup');
+        var $buttonGroup = $button.parents('.buttonGroup');
 
-//         var filterGroup = $buttonGroup.attr('data-filter-group');
+        console.log($buttonGroup);
 
-//         filters[ filterGroup ] = $button.attr('datafilter');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
 
-//         var filterValue = concatValues( filters );
+        console.log(filterGroup);
 
-//         $bikeCollection.isotope({filter : filterValue})
-//     }
-//   )
+        filters[ filterGroup ] = $button.attr('datafilter');
 
-//   function concatValues( obj ) {
-//     var value = '';
-//     for ( var prop in obj ) {
-//       value += obj[ prop ];
-//     }
-//     return value;
-//   }
+        var filterValue = concatValues( filters );
+
+        console.log(filterValue)
+
+        $bikeCollection.isotope({filter : filterValue})
+    }
+  )
+
+  function concatValues( obj ) {
+    var value = '';
+    for ( var prop in obj ) {
+      value += obj[ prop ];
+    }
+    return value;
+  }
   
 
 
