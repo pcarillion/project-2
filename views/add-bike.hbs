@@ -1,0 +1,47 @@
+{{!-- NAME / BRAND / ENGINE / HP / PRICE / TYPE / USAGE / A2 / DESCRIPTION / IMAGE / GALLERY / LINK --}}
+<form action="/bikes/create" method="POST">
+    <h1>ADD A BIKE!</h1>
+
+    <label for="name">Model</label>
+    <input type="text" name="name">
+
+    <label for="brand">Brand</label>
+    <input type="text" name="brand">
+
+    <label for="type">Type</label>
+    <select name="type" id="select-biketype">
+        <option value="Cruiser">Cruiser</option>
+        <option value="Touring">Touring</option>
+        <option value="Roadster">Roadster</option>
+        <option value="Sportbike">Sportbike</option>
+        <option value="Dual-sport">Dual-sport</option>
+        <option value="Standard-retro">Standard-retro</option>
+    </select>
+
+    <label for="engine">Displacement (cc)</label>
+    <input type="number" name="engine">
+
+    <label for="horsepower">Horsepower</label>
+    <input type="number" name="">
+
+    <label for="price">Price</label>
+    <input type="number" name="">
+
+    <label for="usage">Usage</label>
+    <input type="text" name="">
+
+    <label for="A2">A2</label>
+    <input type="checkbox" name="">
+
+    <label for="description">Description</label>
+    <input type="text" name="">
+
+    <label for="link">Link</label>
+    <input type="url" name="">
+
+    <label for="image">Image</label>
+    <input type="url" name="image">
+
+    <button class="create-btn">Create !</button>
+    {{!-- <input type="submit" value="Add !"> --}}
+</form>

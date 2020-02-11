@@ -36,7 +36,7 @@ router.get("/private", (req, res) => {
   if (req.session.currentUser){
     res.render("private");
   } else {
-    res.redirect("/auth/login");
+    res.redirect("/auth/signin");
   }
 })
 
