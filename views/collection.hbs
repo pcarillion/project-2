@@ -2,7 +2,7 @@
 
 <aside class="button-group filter-button-group">
     <p>Filter by Brand</p>
-    <div id="brandButtons">
+    <div id="brandButtons" class="buttonGroup" data-filter-group="brand">
         <button data-filter="*">All</button>
         <button data-filter=".Aprilia">Aprilia</button>
         <button data-filter=".Arch">Arch</button>
@@ -18,17 +18,23 @@
         <button data-filter=".Suzuki">Suzuki</button>
         <button data-filter=".Triumph">Triumph</button>
         <button data-filter=".Yamaha">Yamaha</button>
-    </div id="engineButtons">
+    </div>
     <p>Filter by Engine</p>
-    <div>
-        <button data-filter="*"></button>
+     <div id="engineButtons" class="buttonGroup" data-filter-group="engine">
+        <button data-filter="*">All</button>
         <button data-filter="petiteCylindrée">Petite cylindrée (&lt;500)</button>
         <button data-filter="moyenneCylindrée">Moyenne cylindrée (&lt;800)</button>
         <button data-filter="grosseCylindrée">Grosse cylindrée (&gt;800)</button>
     </div>
-    
-
-    <button data-filter="enginGreaterThan750">cc greater than 750</button>
+    <p>Filter by Type</p>
+     <div id="typeButtons" class="buttonGroup" data-filter-group="type">
+         <button data-filter=".Sportbike">Sportbike</button>
+         <button data-filter=".Dual-sport">Dual-sport</button>
+         <button data-filter=".Cruiser">Cruiser</button>
+         <button data-filter=".Touring">Touring</button>
+         <button data-filter=".Roadster">Roadster</button>
+         <button data-filter=".Standard-retro">Standard-Retro</button>
+     </div>
 </aside>
 
 <div id="bike-collection">
