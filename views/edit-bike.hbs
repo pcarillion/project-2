@@ -1,22 +1,22 @@
-<div class="create-container">
-    <form action="/bikes/create" method="POST" id="create-form">
-        <h2>ADD A NEW BIKE!</h2>
+<div class="edit-container">
+    <form action="/bikes/edit/{{_id}}" method="POST" id="edit-form">
+        <h2>CUSTOM YOUR BIKE!</h2>
         <div class="createInputs">
             <div class="createForm-left">
                 <label for="name">Model</label>
-                <input type="text" name="name" value="bikeDeFoo">
+                <input type="text" name="name">
 
                 <label for="brand">Brand</label>
-                <input type="text" name="brand" value="fooBrand">
+                <input type="text" name="brand">
 
                 <label for="engine">Engine (cc)</label>
-                <input type="number" name="engine" value=3000>
+                <input type="number" name="engine">
 
                 <label for="horsepower">Horsepower</label>
-                <input type="number" name="horsepower" value=3000>
+                <input type="number" name="">
 
                 <label for="price">Price</label>
-                <input type="number" name="price" value=1000000>
+                <input type="number" name="">
 
                 <label for="type">Type</label>
                 <select name="type" id="select-biketype">
@@ -29,7 +29,7 @@
                 </select>
 
                 <label for="A2">Available for A2</label>
-                <input type="checkbox" name="A2" id="checkA2">
+                <input type="checkbox" name="A2">
             </div>
             <div class="createForm-right">
 
@@ -37,17 +37,17 @@
                 <input type="text" name=""> --}}
 
                 <label for="description">Description</label>
-                <input type="text" name="description" value="bikeDeFoo">
+                <input type="text" name="">
 
                 <label for="link">Link to the brand</label>
-                <input type="url" name="link" value="https://media3.giphy.com/media/hR75u5wijqcs7RIavZ/giphy.gif">
+                <input type="url" name="">
 
                 <label for="image">Link for image</label>
-                <input type="url" name="image" value="https://media3.giphy.com/media/hR75u5wijqcs7RIavZ/giphy.gif">
+                <input type="link" name="image">
             </div>
         </div>
 
-        <button id="create-btn">CREATE</button>
+        <button id="create-btn">EDIT</button>
         {{!-- <input type="submit" value="Add !"> --}}
     </form>
 </div>
