@@ -13,13 +13,13 @@ router.post("/create", (req, res, next) => {
         name, brand, engine, horsepower, price, type, description, link, image, A2: Boolean(A2)
     })
     .then(dbRes => {
-        res.render("collection");
+        res.redirect("/admin/dashboard");
         console.log("SUCCESS! A new bike has been added to the db!")
         console.log(brand, name, engine);
     })
     .catch(dbErr => {
         console.log("ERROR! AHAHA YOU FAILED WHILE ADDING A BIKE");
-        res.render("add-bike");
+        res.redirect("/admin/add-bike");
     });
 });
 
@@ -52,15 +52,31 @@ router.post("/edit/:id", (req, res, next) => {
     const {name, brand, engine, horsepower, price, type, A2, description, link, image} = req.body;
     bikeModel
     .findByIdAndUpdate(req.params.id, {
-        name, brand, engine, horsepower, price, type, A2, description, link, image
+        name, brand, engine, horsepower, price, type, description, link, image, A2: Boolean(A2)
     })
     .then(dbRes => {
         console.log(`SUCCESS! ${name} has been updated`);
+        res.redirect("/admin/dashboard");
+        console.log(req.body);
     })
     .catch(dbErr => {
         console.log("ERROR! AHAHA YOU FAILED WHILE UPDATING! ", dbErr);
+        res.redirect("/admin/dashboard");
     })
+})
 
+// DELETE A BIKE 
+router.get("/delete/:id", (req, res, next) => {
+    bikeModel
+    .findByIdAndRemove(req.params.id)
+    .then(dbRes => {
+        console.log("SUCCESS! You've just deleted a bike! ", dbRes);
+        res.redirect("/admin/dashboard");
+    })
+    .catch(dbErr => {
+        console.log("ERROR! AHAHA FAILED WHILE DELETING! ", dbErr);
+        res.redirect("/admin/dashboard");
+    })
 })
 
 module.exports = router;
