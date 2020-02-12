@@ -1,22 +1,22 @@
 <div class="edit-container">
-    <form action="/bikes/edit/{{_id}}" method="POST" id="edit-form">
+    <form action="/admin/edit/{{_id}}" method="POST" class="admin-form">
         <h2>CUSTOM YOUR BIKE!</h2>
         <div class="createInputs">
             <div class="createForm-left">
                 <label for="name">Model</label>
-                <input type="text" name="name">
+                <input type="text" name="name" placeholder="{{bike.name}}">
 
                 <label for="brand">Brand</label>
-                <input type="text" name="brand">
+                <input type="text" name="brand" placeholder="{{bike.brand}}">
 
                 <label for="engine">Engine (cc)</label>
-                <input type="number" name="engine">
+                <input type="number" name="engine" placeholder="{{bike.engine}}">
 
                 <label for="horsepower">Horsepower</label>
-                <input type="number" name="">
+                <input type="number" name="" placeholder="{{bike.horsepower}}">
 
                 <label for="price">Price</label>
-                <input type="number" name="">
+                <input type="number" name="" placeholder="{{bike.price}}">
 
                 <label for="type">Type</label>
                 <select name="type" id="select-biketype">
@@ -37,13 +37,13 @@
                 <input type="text" name=""> --}}
 
                 <label for="description">Description</label>
-                <input type="text" name="">
+                <input type="text" name="" placeholder="{{bike.description}}">
 
                 <label for="link">Link to the brand</label>
-                <input type="url" name="">
+                <input type="url" name="link" placeholder="{{bike.link}}">
 
                 <label for="image">Link for image</label>
-                <input type="link" name="image">
+                <input type="link" name="image" placeholder="{{bike.image}}">
             </div>
         </div>
 

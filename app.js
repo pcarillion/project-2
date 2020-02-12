@@ -44,7 +44,7 @@ app.use(
 // ROUTING
 app.use("/", require("./routes"));
 app.use("/auth", require("./routes/auth"));
-app.use("/bikes", require("./routes/bikes"));
+app.use("/admin", require("./routes/admin"));
 
 // export the app (check import ./bin/www)
 app.listen(process.env.PORT, () => {

@@ -1,0 +1,30 @@
+<h2>Welcome back M. ADMIN</h2>
+<hr>
+<button><a href="/admin/create">ADD A BIKE</a></button>
+<button><a href="/admin/edit">EDIT A BIKE</a></button>
+
+<table id="adminTable">
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#unless bikes}}
+        <tr>
+            <td colspan="4">No bikes yet</td>
+        </tr>
+        {{/unless}}
+
+        {{#each bikes}}
+        <td><a href="/one-bike-{{this._id}}"></a>{{this.brand}}</td>
+        <td><a href="/one-bike-{{this._id}}"></a>{{this.name}}</td>
+        <td><a href="/admin/edit/{{this._id}}">EDIT</a></td>
+        <td><a href="/admin/delete/{{this._id}}">DELETE</a></td>
+        {{/each}}
+    </tbody>
+</table>
+
