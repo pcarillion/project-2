@@ -137,6 +137,7 @@ footer > button:hover {
     border-top: 1px red solid;
     border-bottom: 1px red solid;
     z-index: 999;
+    filter: drop-shadow(5px 5px 5px black)
 }
 
 #title:hover {
@@ -234,44 +235,88 @@ footer > button:hover {
     background-size: cover;
 }
 
-
 #filterAside {
     position: fixed;
-    top: 50px;
-    left: 70vw;
+    top: 70px;
+    right: 0;
+    z-index: 51;
+    /* width: 60px;
+    height: 60px; */
+}
+
+#filterAside > p {
+    display: none;
+}
+
+#filterAside img {
+    width: 60px;
+    height: 60px;
+}
+
+#filterAside:hover img {
+    display: none;
+}
+
+
+#filterAside:hover {
     background-color: #F5251F;
-    /* height: 70vh; */
+    height: 70vh;
     width: 25vw;
     display: flex;
     flex-direction: column;
-    z-index: 51;
     /* padding: 2%; */
     box-shadow: 5px 5px 5px black;
     /* box-shadow: -3px 0 -10px -5px black; */
 }
 
-#filtersSection, #sortButtons {
-    width: 100%;
-    height: 70vh;
-    padding: 2%;
-}
-
-#filterButton:hover, #sortButton:hover {
-    color: black;
-    cursor: pointer;
+#filterAside:hover > p {
+    display: block;
 }
 
 .hidden {
     display: none;
 }
 
-#filterAside p {
+#filterAside:hover #sortButtons {
+    align-items: center;
+    padding: 2%;
+
+}
+
+#filterAside:hover #sortButtons > div {
+    width: 100%;
+    height: 5vh;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#filterAside:hover #sortButtons button {
+    background-color: white;
+    border: none;
+}
+
+#filterAside:hover #filtersSection {
+    width: 100%;
+    height: 70vh;
+    padding: 2%;
+}
+
+#filterAside:hover #filterButton:hover, #sortButton:hover {
+    color: black;
+    cursor: pointer;
+}
+
+
+#filterAside:hover p {
     color: white;
     text-align: center;
     margin: 0;
 }
 
-#filterAside div {
+#filterAside:hover div {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -281,38 +326,39 @@ footer > button:hover {
     -ms-overflow-style: none;
 }
 
-#filterAside div::-webkit-scrollbar {
+#filterAside:hover div::-webkit-scrollbar {
     width: 5%;
   }
-#filterAside div::-webkit-scrollbar-track {
+  #filterAside:hover div::-webkit-scrollbar-track {
     background-color: white;
 }
    
-#filterAside div::-webkit-scrollbar-thumb {
+#filterAside:hover div::-webkit-scrollbar-thumb {
     background: black; 
     border-radius: 10px;
     margin: 1px;
   }
  
-#filterAside div::-webkit-scrollbar-thumb:hover {
+  #filterAside:hover div::-webkit-scrollbar-thumb:hover {
     background: #b30000; 
   }
 
 
 
-#filterAside div > button {
+  #filterAside:hover div > button {
     width: 100%;
     background-color: white;
     border: none;
     padding: 1%;
 }
 
-#filterAside div > button:hover {
+#filterAside:hover div > button:hover, #filterAside:hover #sortButtons button:hover {
     background-color: rgb(0, 0, 0);
     color: white;
+    cursor: pointer;
 }
 
-#filterAside .is-checked {
+#filterAside:hover .is-checked {
     background-color: #b30000;
     color: white;
 }
