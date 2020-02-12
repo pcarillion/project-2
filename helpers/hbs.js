@@ -8,3 +8,9 @@ hbs.registerHelper("createEngineClass", function(number) {
   });
   
   
+  
+hbs.registerHelper("createA2Class", function(A2) {
+  if (A2 == "true") return "A2";
+  if (A2 == "false") return "";
+});
+

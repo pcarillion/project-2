@@ -193,7 +193,7 @@ footer > button:hover {
     margin: 0;
 }
 
-.engine {
+.engine, .price {
     font-size: 4vh;
     margin: 0;
 }
@@ -250,13 +250,13 @@ footer > button:hover {
     /* box-shadow: -3px 0 -10px -5px black; */
 }
 
-#filtersSection {
+#filtersSection, #sortButtons {
     width: 100%;
     height: 70vh;
     padding: 2%;
 }
 
-#filterButton:hover {
+#filterButton:hover, #sortButton:hover {
     color: black;
     cursor: pointer;
 }
@@ -312,7 +312,7 @@ footer > button:hover {
     color: white;
 }
 
-.is-checked {
+#filterAside .is-checked {
     background-color: #b30000;
     color: white;
 }
