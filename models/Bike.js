@@ -26,7 +26,7 @@ const bikeSchema = new Schema({
     usage: {
 
     },
-    A2: String,
+    A2: Boolean,
     description: String,
     image: String,
     gallery: Array,
