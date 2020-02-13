@@ -1,8 +1,8 @@
-<div class="edit-container">
+<div class="admin-container">
     <form action="/admin/edit/{{bike._id}}" method="POST" class="admin-form">
         <h2>CUSTOM YOUR BIKE!</h2>
-        <div class="createInputs">
-            <div class="createForm-left">
+        <div class="adminInputs">
+            <div class="adminForm-left">
                 <label for="name">Model</label>
                 <input type="text" name="name" value="{{bike.name}}">
 
@@ -31,7 +31,7 @@
                 <label for="A2">Available for A2</label>
                 <input type="checkbox" name="A2">
             </div>
-            <div class="createForm-right">
+            <div class="adminForm-right">
 
                 {{!-- <label for="usage">Usage</label>
                 <input type="text" name=""> --}}
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <button id="create-btn">EDIT</button>
+        <button id="admin-btn">EDIT</button>
         {{!-- <input type="submit" value="Add !"> --}}
     </form>
 </div>

@@ -1,0 +1,120 @@
+/* FORMS : CREATE AND EDIT  */
+.admin-container {
+    background-image: url(./../images/editForm-customGarage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* position: relative; */
+    display: flex;
+}
+
+#admin-form {
+    /* border: 2px solid black; */
+    background-color: rgb(245, 37, 31);
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px 1px black;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 80%;
+    margin-left: 5%;
+    margin-top: 80px;
+    padding: 10px;
+}
+
+.adminInputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#select-biketype {
+    width: 90%;
+    height: 25px;
+    text-align: center;
+}
+
+.adminInputs input {
+    width: 80%;
+    height: 5px;
+    /* border-radius: 5%/50%; */
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.adminInputs label {
+    margin-top: 8px;
+}
+
+.adminForm-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+}
+
+.adminForm-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#admin-btn {
+    margin-top: 10px;
+    padding: 10px;
+    width: 80px;
+    border-radius: 15%/50%;
+    background-color: rgb(245, 37, 31);
+    box-sizing: border-box;
+    font-size: 1em;
+    border: 3px solid white;
+    color: white;
+}
+
+#admin-btn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    border: 3px solid black;
+    color: black;
+}
+
+/* ADMIN DASHBOARD */
+
+.dashboard {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#admin-createBtn {
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 10%/50%;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+#admin-createBtn:hover {
+    background-color: rgb(245, 37, 31);
+    cursor: pointer;
+}
+
+#adminTable {
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.admin-bikeRow:hover {
+    background-color: rgb(245, 37, 31);
+    cursor: pointer;
+}
