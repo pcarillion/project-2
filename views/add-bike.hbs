@@ -1,8 +1,8 @@
 <div class="create-container">
-    <form action="/admin/create" method="POST" class="admin-form">
+    <form action="/admin/create" method="POST" class="create-form">
         <h2>ADD A NEW BIKE!</h2>
-        <div class="createInputs">
-            <div class="createForm-left">
+        <div class="adminInputs">
+            <div class="adminForm-left">
                 <label for="name">Model</label>
                 <input type="text" name="name" value="bikeDeFoo">
 
@@ -19,7 +19,7 @@
                 <input type="number" name="price" value="1000000">
 
                 <label for="type">Type</label>
-                <select name="type" id="select-biketype">
+                <select name="type" class="select-biketype">
                     <option value="Cruiser">Cruiser</option>
                     <option value="Touring">Touring</option>
                     <option value="Roadster">Roadster</option>
@@ -31,13 +31,13 @@
                 <label for="A2">Available for A2</label>
                 <input type="checkbox" name="A2" id="checkA2">
             </div>
-            <div class="createForm-right">
+            <div class="adminForm-right">
 
                 {{!-- <label for="usage">Usage</label>
                 <input type="text" name=""> --}}
 
                 <label for="description">Description</label>
-                <textarea type="text" name="description" value="bikeDeFoo" cols="50" rows="4"></textarea>
+                <textarea type="text" name="description" value="bikeDeFoo" cols="60" rows="4"></textarea>
 
                 <label for="link">Link to the brand</label>
                 <input type="url" name="link" value="https://media3.giphy.com/media/hR75u5wijqcs7RIavZ/giphy.gif">
@@ -46,15 +46,15 @@
                 <input type="url" name="image" value="https://media3.giphy.com/media/hR75u5wijqcs7RIavZ/giphy.gif">
 
                 <label for="gallery">Add more images</label>
-                <input type="url" name="gallery" value="">
-                <input type="url" name="gallery" value="">
-                <input type="url" name="gallery" value="">
+                <input class="galleryInput" type="url" name="gallery" value="">
+                <input class="galleryInput" type="url" name="gallery" value="">
+                <input class="galleryInput" type="url" name="gallery" value="">
 
 
             </div>
         </div>
 
-        <button id="create-btn">CREATE</button>
+        <button class="create-btn">CREATE</button>
         {{!-- <input type="submit" value="Add !"> --}}
     </form>
 </div>

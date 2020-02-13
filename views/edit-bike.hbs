@@ -1,6 +1,6 @@
-<div class="admin-container">
-    <form action="/admin/edit/{{bike._id}}" method="POST" class="admin-form">
-        <h2>CUSTOM YOUR BIKE!</h2>
+<div class="edit-container">
+    <form action="/admin/edit/{{bike._id}}" method="POST" class="edit-form">
+        <h2>CUSTOM YOUR BIKE: The {{bike.name}} !</h2>
         <div class="adminInputs">
             <div class="adminForm-left">
                 <label for="name">Model</label>
@@ -19,7 +19,7 @@
                 <input type="number" name="price" value="{{bike.price}}">
 
                 <label for="type">Type</label>
-                <select name="type" id="select-biketype">
+                <select name="type" class="select-biketype">
                     <option value="Cruiser">Cruiser</option>
                     <option value="Touring">Touring</option>
                     <option value="Roadster">Roadster</option>
@@ -37,24 +37,24 @@
                 <input type="text" name=""> --}}
 
                 <label for="description">Description</label>
-                <textarea type="text" name="description" cols="100" rows="10">
+                <textarea type="text" name="description" cols="80" rows="5">
                     {{bike.description}}
                 </textarea>
 
-                <label for="link">Link to the brand</label>
+                <label for="link">Link to the brand's website</label>
                 <input type="url" name="link" value="{{bike.link}}">
 
-                <label for="image">Link for image</label>
+                <label for="image">Link for first image</label>
                 <input type="link" name="image" value="{{bike.image}}">
 
                 <label for="gallery">Add more images</label>
                 {{#each bike.gallery}}
-                <input type="link" name="gallery" value="{{this}}">
+                <input class="galleryInput" type="link" name="gallery" value="{{this}}">
                 {{/each}}
             </div>
         </div>
 
-        <button id="admin-btn">EDIT</button>
+        <button class="edit-btn">EDIT</button>
         {{!-- <input type="submit" value="Add !"> --}}
     </form>
 </div>

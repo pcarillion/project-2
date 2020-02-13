@@ -1,6 +1,6 @@
 /* FORMS : CREATE AND EDIT  */
-.admin-container {
-    background-image: url(./../images/editForm-customGarage.jpg);
+.create-container {
+    background-image: url(./../images/createForm-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -8,40 +8,59 @@
     display: flex;
 }
 
-#admin-form {
+.edit-container {
+    background-image: url(./../images/editForm-customGarage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+}
+
+.create-form {
+    background-color: rgb(245, 37, 31);
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: min-content;
+    margin-left: 3%;
+    margin-top: 80px;
+    padding: 10px;
+}
+
+.edit-form {
     /* border: 2px solid black; */
     background-color: rgb(245, 37, 31);
     color: white;
     box-sizing: border-box;
-    box-shadow: 0 0 8px 1px black;
-    border-radius: 2%;
+    box-shadow: 0 0 10px 1px black;
+    /* border-radius: 2%; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
-    height: 80%;
-    margin-left: 5%;
-    margin-top: 80px;
+    width: 60%;
+    height: min-content;
+    margin: auto;
     padding: 10px;
+}
+
+.edit-form h2 {
+    margin: 0 auto;
 }
 
 .adminInputs {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-}
-
-#select-biketype {
+    /* justify-content: space-between; */
     width: 90%;
-    height: 25px;
-    text-align: center;
 }
 
 .adminInputs input {
-    width: 80%;
+    width: 90%;
     height: 5px;
-    /* border-radius: 5%/50%; */
     border: none;
     padding: 10px;
     text-align: center;
@@ -49,6 +68,12 @@
 
 .adminInputs label {
     margin-top: 8px;
+}
+
+.select-biketype {
+    width: 100%;
+    height: 25px;
+    text-align: center;
 }
 
 .adminForm-left {
@@ -65,8 +90,19 @@
     width: 100%;
 }
 
-#admin-btn {
-    margin-top: 10px;
+.adminForm-left input {
+    border-radius: 7%/50%;
+}
+
+.adminForm-right input {
+    border-radius: 3%/50%;
+}
+
+.galleryInput {
+    margin-bottom: 10px;
+}
+
+.create-btn {
     padding: 10px;
     width: 80px;
     border-radius: 15%/50%;
@@ -75,13 +111,26 @@
     font-size: 1em;
     border: 3px solid white;
     color: white;
+    margin-bottom: 25px;
 }
 
-#admin-btn:hover {
+.edit-btn {
+    padding: 10px;
+    width: 80px;
+    border-radius: 15%/50%;
+    background-color: rgb(245, 37, 31);
+    box-sizing: border-box;
+    font-size: 1em;
+    border: 3px solid white;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.create-btn:hover, .edit-btn:hover {
     text-decoration: underline;
     cursor: pointer;
-    border: 3px solid black;
-    color: black;
+    /* border: 3px solid black;
+    color: black; */
 }
 
 /* ADMIN DASHBOARD */
@@ -93,7 +142,7 @@
     align-items: center;
 }
 
-#admin-createBtn {
+.admin-createBtn {
     width: 100px;
     border: 2px solid black;
     border-radius: 10%/50%;
@@ -101,17 +150,17 @@
     font-size: 0.9rem;
 }
 
-#admin-createBtn:hover {
+.admin-createBtn:hover {
     background-color: rgb(245, 37, 31);
     cursor: pointer;
 }
 
-#admin-createLink:hover button {
+.admin-createLink:hover button {
     color: white;
 }
 
-
-#adminTable {
+/* ADMIN TABLE */
+.adminTable {
     border: 2px solid black;
     font-weight: bold;
     margin: 0 auto;
@@ -125,7 +174,9 @@
 }
 
 .tableTitle th {
-    width: 120px;
+    min-width: 110px;
+    max-width: 205px;
+    padding: 5px;
 }
 
 .admin-bikeRow:hover {
