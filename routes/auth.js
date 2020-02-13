@@ -99,7 +99,4 @@ router.post("/signin", (req, res, next) => {
 })
 
 
-/* ACTION : LOGIN */
-router.
-
 module.exports = router;
