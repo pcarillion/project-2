@@ -3,6 +3,8 @@ const router = express.Router();
 const bikeModel = require("../models/Bike");
 const protectRoute = require("../middlewares/protectRoute");
 const protectAdminRoute = require("../middlewares/protectAdminRoute");
+const userModel = require("../models/User")
+
 
 /* GET home page */
 router.get(["/", "/index"], (req, res, next) => {

@@ -84,7 +84,7 @@ router.post("/signin", (req, res, next) => {
       // until session.destroy
       // could be req.session.totoFriends = clone;
       console.log("WELCOME! You've been logged successfully!");
-      res.redirect("/private");
+      res.redirect("/collection");
       return;
     } else {
       // encrypted password match failed
