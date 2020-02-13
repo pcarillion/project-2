@@ -8,10 +8,10 @@ router.get("/create", (req, res, next) => {
 })
 
 router.post("/create", (req, res, next) => {
-    const {name, brand, engine, horsepower, price, type, A2, description, link, image} = req.body;
+    const {name, brand, engine, horsepower, price, type, A2, description, link, image, gallery} = req.body;
     bikeModel
     .create({
-        name, brand, engine, horsepower, price, type, description, link, image, A2: Boolean(A2)
+        name, brand, engine, horsepower, price, type, description, link, image, A2: Boolean(A2), gallery
     })
     .then(dbRes => {
         res.redirect("/admin/dashboard");
@@ -50,10 +50,10 @@ router.get("/edit/:id", (req, res, next) => {
 
 // EDIT A BIKE 
 router.post("/edit/:id", (req, res, next) => {
-    const {name, brand, engine, horsepower, price, type, A2, description, link, image} = req.body;
+    const {name, brand, engine, horsepower, price, type, A2, description, link, image, gallery} = req.body;
     bikeModel
     .findByIdAndUpdate(req.params.id, {
-        name, brand, engine, horsepower, price, type, description, link, image, A2: Boolean(A2)
+        name, brand, engine, horsepower, price, type, description, link, image, A2: Boolean(A2), gallery
     })
     .then(dbRes => {
         console.log(`SUCCESS! ${name} has been updated`);

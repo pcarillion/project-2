@@ -98,5 +98,13 @@ router.post("/signin", (req, res, next) => {
   })
 })
 
+// ACTION : LOGOUT
+router.get("/signout", (req, res) => {
+  req.session.destroy(() => {
+    res.locals.isLoggedIn = undefined;
+    res.locals.isAdmin = undefined;
+    res.redirect("/auth/signin");
+  });
+});
 
 module.exports = router;

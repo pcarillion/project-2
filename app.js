@@ -41,6 +41,10 @@ app.use(
   })
 );
 
+// expose login status to the hbs templates
+// allows every template to check the login status
+app.use(require("./middlewares/exposeLoginStatus"));
+
 // ROUTING
 app.use("/", require("./routes"));
 app.use("/auth", require("./routes/auth"));
