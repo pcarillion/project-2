@@ -34,12 +34,29 @@ router.get("/one-bike-:id", (req, res, next)=> {
 
 // GET myCollection (private route)
 
-router.get("/private", protectRoute, (req, res) => {
+router.get("/my-collection", (req, res) => {
   if (req.session.currentUser){
-    res.render("private");
+    userModel
+      .findById(req.session.currentUser._id)
+      .populate("favorites")
+      .then(user => {console.log(user, req.session.currentUser.favorites);
+        res.render("mycollection", {bikes:user.favorites})})
+      .catch(err => console.log(err))
   } else {
     res.redirect("/auth/signin");
   }
+})
+
+router.post("/add-to-favorite/:id", (req, res, next) => {
+  if (req.session.currentUser){
+  userModel
+    .findByIdAndUpdate(req.session.currentUser._id, {$push: {favorites: req.params.id}},{new:true})
+    .then (user => {
+          console.log(user, req.session.currentUser)
+          res.redirect('/collection')}
+    )
+    .catch(err => {console.log(err)})
+} else (res.redirect("/auth/signin"))
 })
 
 
