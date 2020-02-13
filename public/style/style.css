@@ -464,8 +464,10 @@ footer > button:hover {
     padding: 2%
 }
 
+
+
 #one-bike-details a:hover {
-    color: red;
+    text-decoration: underline;
 }
 
 #gallery {
@@ -493,6 +495,21 @@ footer > button:hover {
     height: 100%;
     width: 100%;
 } */
+
+
+#one-bike-details  button {
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 5%;
+    width: 200px;
+}
+
+#one-bike-details button:hover  {
+    background-color: black;
+    cursor: pointer;
+}
 
 
 

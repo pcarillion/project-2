@@ -180,7 +180,14 @@
 
 .admin-bikeRow:hover {
     background-color: rgb(245, 37, 31);
-    cursor: pointer;
     border: rgb(245, 37, 31) 1px ;
+}
 
+.admin-bikeRow:hover a {
+    cursor: pointer;
+    color: white;
+}
+
+tr {
+    height: 25px;
 }

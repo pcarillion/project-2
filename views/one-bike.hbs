@@ -8,7 +8,6 @@
 
 <div id="one-bike-details">
     <div>
-        <form action="/add-to-favorite/{{bike.id}}" method="post"><button method="post">Add to favorite</button></form>
         <h2>{{bike.brand}} {{bike.name}}</h2>
         <p>{{bike.description}}</p>
         <table id="details-table">
@@ -36,6 +35,7 @@
             </tbody>
         </table>
         <p><a href="{{bike.link}}">See more on the brand's website</a></p>
+        <form action="/add-to-favorite/{{bike.id}}" method="post"><button method="post">Add to favorite</button></form>
         <p>Gallery</p>
         <div id="gallery">
         {{#each bike.gallery}}
