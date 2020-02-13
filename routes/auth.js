@@ -50,9 +50,7 @@ router.post("/signup", (req, res, next) => {
 /* ACTION : LOGIN */
 router.post("/signin", (req, res, next) => {
   const user = req.body;
-  console.log(user);
-  console.log(user.mail);
-  console.log(user.password);
+
 
   if (!user.mail || !user.password){
     console.log("ERROR! Wrong credentials.")
@@ -78,7 +76,7 @@ router.post("/signin", (req, res, next) => {
       // until session.destroy
       // could be req.session.totoFriends = clone;
       console.log("WELCOME! You've been logged successfully!");
-      return res.redirect("/private");
+      return res.redirect("/collection");
     } else {
       // encrypted password match failed
       console.log("ERROR! WRONG CREDENTIALS!!!")

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bikeModel = require("../models/Bike");
+const userModel = require("../models/User")
 
 /* GET home page */
 router.get(["/", "/index"], (req, res, next) => {
@@ -12,7 +13,7 @@ router.get(["/collection", "/bikes"], (req, res, next) => {
   bikeModel
   .find()
   .then(bikes => {
-    console.log(bikes);
+    // console.log(bikes);
     res.render("collection", {bikes})
   })
   .catch(next)
@@ -32,12 +33,29 @@ router.get("/one-bike-:id", (req, res, next)=> {
 
 // GET myCollection (private route)
 
-router.get("/private", (req, res) => {
+router.get("/my-collection", (req, res) => {
   if (req.session.currentUser){
-    res.render("private");
+    userModel
+      .findById(req.session.currentUser._id)
+      .populate("favorites")
+      .then(user => {console.log(user, req.session.currentUser.favorites);
+        res.render("mycollection", {bikes:user.favorites})})
+      .catch(err => console.log(err))
   } else {
     res.redirect("/auth/signin");
   }
+})
+
+router.post("/add-to-favorite/:id", (req, res, next) => {
+  if (req.session.currentUser){
+  userModel
+    .findByIdAndUpdate(req.session.currentUser._id, {$push: {favorites: req.params.id}},{new:true})
+    .then (user => {
+          console.log(user, req.session.currentUser)
+          res.redirect('/collection')}
+    )
+    .catch(err => {console.log(err)})
+} else (res.redirect("/auth/signin"))
 })
 
 module.exports = router;
