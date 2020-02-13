@@ -4,29 +4,29 @@
         <a href="/collection">2020 COLLECTIONS</a>
     </div>
 
+    {{#unless isAdmin}}
     <div id="nav-middleNoAdmin">
-        {{#unless isAdmin}}
         <a href="/my-collection">MY BIKES</a>
-        {{/unless}}
     </div>
+    {{/unless}}
 
+    {{#if isAdmin}}
     <div id="nav-middleAdmin">
-        {{#if isAdmin}}
         <a href="/my-collection">MY BIKES</a>
         <a href="/admin/dashboard">DASHBOARD</a>
-        {{/if}}
     </div>
+    {{/if}}
 
+    {{#unless isLoggedIn}}
     <div id="nav-rightNotLoggedIn">
-        {{#unless isLoggedIn}}
         <a href="/auth/signin">LOG IN</a>
         <a href="/auth/signup">SIGN UP</a>
-        {{/unless}}
     </div>
+    {{/unless}}
 
+    {{#if isLoggedIn}}
     <div id="nav-rightLoggedIn">
-        {{#if isLoggedIn}}
         <a href="/auth/signout">LOG OUT</a>
-        {{/if}}
     </div>
+    {{/if}}
 </nav>
