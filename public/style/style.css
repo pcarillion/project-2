@@ -241,9 +241,11 @@ footer > button:hover {
     position: fixed;
     top: 70px;
     right: 0;
+    /* transform: translateX(0); */
     z-index: 51;
     width: 60px;
     height: 60px;
+    transition: transform    0.5s;
 }
 
 #filterAside section {
@@ -258,13 +260,12 @@ footer > button:hover {
     width: 60px;
     height: 60px;
 } 
+
         /* Aside displayed */
 
 #filterAside:hover img {
     display: none;
 }
-
-
 
 #filterAside:hover {
     background-color: #F5251F;
@@ -273,10 +274,13 @@ footer > button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    /* transform: translateX(-30vw); */
     /* padding: 2%; */
     box-shadow: 5px 5px 5px black;
     /* box-shadow: -3px 0 -10px -5px black; */
     padding: 10px 2vh;
+    /* -web-kit-transition: -webkit-transform 0.5s; */
+
 }
 
 #filterAside:hover > div {
@@ -329,11 +333,6 @@ footer > button:hover {
 #filterAside:hover #a2Buttons {
     height: 40px;
 }
-
-
-
-
-
 
 #filterAside:hover button {
     background-color: white;
