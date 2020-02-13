@@ -1,6 +1,6 @@
 <div class="edit-container">
     <form action="/admin/edit/{{bike._id}}" method="POST" class="edit-form">
-        <h2>CUSTOM YOUR BIKE: The {{bike.name}} !</h2>
+        <h2>Edit : {{bike.brand}} {{bike.name}}</h2>
         <div class="adminInputs">
             <div class="adminForm-left">
                 <label for="name">Model</label>
@@ -29,7 +29,7 @@
                 </select>
 
                 <label for="A2">Available for A2</label>
-                <input type="checkbox" name="A2">
+                <input type="checkbox" name="A2" class="checkA2">
             </div>
             <div class="adminForm-right">
 
