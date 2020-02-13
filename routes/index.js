@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const bikeModel = require("../models/Bike");
+const protectRoute = require("../middlewares/protectRoute");
+const protectAdminRoute = require("../middlewares/protectAdminRoute");
 
 /* GET home page */
 router.get(["/", "/index"], (req, res, next) => {
@@ -32,12 +34,14 @@ router.get("/one-bike-:id", (req, res, next)=> {
 
 // GET myCollection (private route)
 
-router.get("/private", (req, res) => {
+router.get("/private", protectRoute, (req, res) => {
   if (req.session.currentUser){
     res.render("private");
   } else {
     res.redirect("/auth/signin");
   }
 })
+
+
 
 module.exports = router;

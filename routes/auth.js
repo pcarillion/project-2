@@ -27,7 +27,8 @@ router.post("/signup", (req, res, next) => {
     .then(dbRes => {
       if (dbRes) {
         console.log("ERROR! Sorry, this email is already taken!");
-        return res.redirect("/auth/signup");
+        res.redirect("/auth/signup");
+        return;
       }
 
       const salt = bcryptjs.genSaltSync(10);
@@ -38,8 +39,11 @@ router.post("/signup", (req, res, next) => {
       // new password is ready for database
 
       userModel
-      .create(user).then(() => res.redirect("/auth/signin"));
-      console.log("SUCCESS! A new user has been created!");
+      .create(user)
+      .then(() => {
+        res.redirect("/auth/signin");
+        console.log("SUCCESS! A new user has been created!");
+      })
     })
     .catch(dbErr => {
       console.log("ERROR! ", dbErr);
@@ -56,7 +60,8 @@ router.post("/signin", (req, res, next) => {
 
   if (!user.mail || !user.password){
     console.log("ERROR! Wrong credentials.")
-    return res.redirect("/auth/signin");
+    res.redirect("/auth/signin");
+    return;
   }
 
   userModel
@@ -65,7 +70,8 @@ router.post("/signin", (req, res, next) => {
     if(!dbRes) {
       // !dbRes means that no user has been found with this mail
       console.log("ERROR! Wrong credentials..........");
-      return res.redirect("/auth/signin");
+      res.redirect("/auth/signin");
+      return;
     }
     // case 2: user has been found in db
     if (bcryptjs.compareSync(user.password, dbRes.password)) {
@@ -78,11 +84,13 @@ router.post("/signin", (req, res, next) => {
       // until session.destroy
       // could be req.session.totoFriends = clone;
       console.log("WELCOME! You've been logged successfully!");
-      return res.redirect("/private");
+      res.redirect("/private");
+      return;
     } else {
       // encrypted password match failed
       console.log("ERROR! WRONG CREDENTIALS!!!")
-      return res.redirect("/auth/signin")
+      res.redirect("/auth/signin");
+      return;
     }
   })
   .catch(dbErr => {
