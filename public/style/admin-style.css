@@ -106,12 +106,26 @@
     cursor: pointer;
 }
 
+#admin-createLink:hover button {
+    color: white;
+}
+
+
 #adminTable {
     border: 2px solid black;
-    text-transform: uppercase;
     font-weight: bold;
     margin: 0 auto;
     text-align: center;
+}
+
+.tableTitle {
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+}
+
+.tableTitle th {
+    width: 120px;
 }
 
 .admin-bikeRow:hover {
