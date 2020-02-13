@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const bikeModel = require("../models/Bike");
-const protectAdminRoute = require("../middlewares/protectAdminRoute");
+// const protectAdminRoute = require("../middlewares/protectAdminRoute");
 
-router.get("/create", protectAdminRoute, (req, res, next) => {
+router.get("/create", (req, res, next) => {
     res.render("add-bike");
 })
 
-router.post("/create", protectAdminRoute, (req, res, next) => {
+router.post("/create", (req, res, next) => {
     const {name, brand, engine, horsepower, price, type, A2, description, link, image} = req.body;
     bikeModel
     .create({
@@ -25,7 +25,7 @@ router.post("/create", protectAdminRoute, (req, res, next) => {
 });
 
 // GET TO THE DASHBOARD
-router.get("/dashboard", protectAdminRoute, (req, res, next) => {
+router.get("/dashboard", (req, res, next) => {
     bikeModel
     .find()
     .then(bikes => {
@@ -37,7 +37,7 @@ router.get("/dashboard", protectAdminRoute, (req, res, next) => {
 });
 
 // GET TO THE EDITING FORM
-router.get("/edit/:id", protectAdminRoute, (req, res, next) => {
+router.get("/edit/:id", (req, res, next) => {
     bikeModel
     .findById(req.params.id)
     .then(bike => {
@@ -49,7 +49,7 @@ router.get("/edit/:id", protectAdminRoute, (req, res, next) => {
 })
 
 // EDIT A BIKE 
-router.post("/edit/:id", protectAdminRoute, (req, res, next) => {
+router.post("/edit/:id", (req, res, next) => {
     const {name, brand, engine, horsepower, price, type, A2, description, link, image} = req.body;
     bikeModel
     .findByIdAndUpdate(req.params.id, {
@@ -67,7 +67,7 @@ router.post("/edit/:id", protectAdminRoute, (req, res, next) => {
 })
 
 // DELETE A BIKE 
-router.get("/delete/:id", protectAdminRoute, (req, res, next) => {
+router.get("/delete/:id", (req, res, next) => {
     bikeModel
     .findByIdAndRemove(req.params.id)
     .then(dbRes => {
