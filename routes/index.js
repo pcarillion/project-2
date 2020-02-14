@@ -16,7 +16,7 @@ router.get(["/collection", "/bikes"], (req, res, next) => {
   bikeModel
   .find()
   .then(bikes => {
-    console.log(bikes);
+    // console.log(bikes);
     res.render("collection", {bikes})
   })
   .catch(next)

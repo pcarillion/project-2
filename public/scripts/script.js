@@ -130,8 +130,6 @@ $('#sortButtons').each( function( i, buttonGroup ) {
 $bikeCollection.on('arrangeComplete', (x) => {
   const allContainers = document.querySelectorAll(".bike-container");
 
-
-
   const displayed = [...allContainers].filter((div) => div.style.display !== "none");
 
   console.log(displayed)
