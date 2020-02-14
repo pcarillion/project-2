@@ -36,7 +36,7 @@ router.get("/one-bike-:id", (req, res, next)=> {
 
 // GET myCollection (private route)
 
-router.get("/my-collection", (req, res) => {
+router.get("/my-collection", protectRoute, (req, res) => {
   if (req.session.currentUser){
     userModel
       .findById(req.session.currentUser._id)
@@ -49,7 +49,7 @@ router.get("/my-collection", (req, res) => {
   }
 })
 
-router.post("/add-to-favorite/:id", (req, res, next) => {
+router.post("/add-to-favorite/:id", protectRoute, (req, res, next) => {
   if (req.session.currentUser){
   userModel
     .findByIdAndUpdate(req.session.currentUser._id, {$push: {favorites: req.params.id}},{new:true})
