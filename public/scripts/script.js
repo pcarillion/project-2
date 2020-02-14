@@ -146,3 +146,4 @@ $bikeCollection.on('arrangeComplete', (x) => {
     if (i%2) div.classList.add("redBackground");
   })
 })
+

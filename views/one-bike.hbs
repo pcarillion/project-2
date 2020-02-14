@@ -5,7 +5,6 @@
 </div>
 
 <div id="transition"></div>
-
 <div id="one-bike-details">
     <div>
         <h2>{{bike.brand}} {{bike.name}}</h2>
@@ -35,7 +34,10 @@
             </tbody>
         </table>
         <p><a href="{{bike.link}}">See more on the brand's website</a></p>
-        <form action="/add-to-favorite/{{bike.id}}" method="post"><button method="post">Add to favorite</button></form>
+        {{#isFavourited bike._id user.favorites}}
+    
+        {{/isFavourited}}
+        
         <p>Gallery</p>
         <div id="gallery">
         {{#each bike.gallery}}
